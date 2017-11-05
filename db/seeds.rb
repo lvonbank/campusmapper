@@ -23,7 +23,8 @@ movies.each do |movie|
 end
 
 
-plans = [{:name => "Wissink Hall", :imageSource => "wh-1.pdf", :mapped => false, :floorNum => 1}]
+plans = [{:name => "Wissink Hall", :imageSource => "wh-1.pdf", :mapped => false, :floorNum => 1},
+{:name => "Armstrong Hall", :imageSource => "ah-1.pdf", :mapped => false, :floorNum => 1}]
 plans.each do |plan|
     FloorPlan.create!(plan)
     

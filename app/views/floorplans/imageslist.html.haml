@@ -4,14 +4,14 @@
     %thead
         %tr
             %th Image Name
-            %th Image Details
-            %th Edit Image
-            %th Delete Image
+            %th
+            %th 
+            %th 
     %tbody
         - @floor_plans.each do |plan|
             %tr
                 %td= plan.name
-                %td= link_to "Details"
+                %td= link_to "Details", image_path(plan.imageSource)
                 %td= link_to "Edit"
                 %td= link_to "Delete"
                 
