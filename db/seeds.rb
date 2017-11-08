@@ -18,6 +18,14 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
 
+locations = [{:title => 'Nelson Hall', :acronym => 'NH', :department => 'Art', :x => 680, :y => 60, :width => 150, :height => 130},
+    	     {:title => 'Wissink Hall', :acronym => 'WH', :department => 'Computer Science', :x => 855, :y => 54, :width => 80, :height => 120},
+  	 ]
+
 movies.each do |movie|
   Movie.create!(movie)
+end
+
+locations.each do |location|
+  Location.create!(location)
 end
