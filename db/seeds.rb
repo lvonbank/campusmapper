@@ -18,16 +18,16 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
   	 
-@jonathan_hardwick = {:name => 'Jonathan Hardwick'};
-users = [@jonathan_hardwick,
-    	 {:name => 'John Doe'},
-     ]
+#@jonathan_hardwick = {:name => 'Jonathan Hardwick'};
+#users = [@jonathan_hardwick,
+#    	 {:name => 'John Doe'},
+#     ]
 
-@wissink_hall = {:title => 'Wissink Hall', :acronym => 'WH', :department => 'Computer Science', :x => 855, :y => 54, :width => 80, :height => 120, :parent_location => nil, :owner => nil}
-locations = [{:title => 'Nelson Hall', :acronym => 'NH', :department => 'Art', :x => 680, :y => 60, :width => 150, :height => 130, :parent_location => nil, :owner => nil},
-    	     @wissink_hall,
-    	     {:title => 'WH room 283', :acronym => 'WH', :department => 'Computer Science', :x => 870, :y => 54, :width => 10, :height => 10, :parent_location => @wissink_hall, :owner => @jonathan_hardwick},
-  	 ]
+#@wissink_hall = {:title => 'Wissink Hall', :acronym => 'WH', :department => 'Computer Science', :x => 855, :y => 54, :width => 80, :height => 120, :parent_location => nil, :owner => nil}
+#locations = [{:title => 'Nelson Hall', :acronym => 'NH', :department => 'Art', :x => 680, :y => 60, :width => 150, :height => 130, :parent_location => nil, :owner => nil},
+#    	     @wissink_hall,
+#    	     {:title => 'WH room 283', :acronym => 'WH', :department => 'Computer Science', :x => 870, :y => 54, :width => 10, :height => 10, :parent_location => @wissink_hall, :owner => @jonathan_hardwick},
+#  	 ]
 
 plans = [{:name => "Wissink Hall", :imageSource => "wh-1.pdf", :mapped => false, :floorNum => 1},
 {:name => "Armstrong Hall", :imageSource => "ah-1.pdf", :mapped => false, :floorNum => 1}]
@@ -36,13 +36,15 @@ movies.each do |movie|
   Movie.create!(movie)
 end
 
-locations.each do |location|
-  Location.create!(location)
-end
+#locations.each do |location|
+#  Location.create!(location)
+#end
 
-users.each do |user|
-  User.create!(user)
-end
+#users.each do |user|
+#  User.create!(user)
+#end
+User.create!({:email => "jellemdekker@gmail.com", :password => "Test!23"})
+User.create!({:email => "tclemgem@gmail.com", :password => "Test!23"})
 
 plans.each do |plan|
     FloorPlan.create!(plan)
