@@ -38,5 +38,5 @@ locations.each do |location|
 end
 
 users.each do |user|
-  User.create!(location)
+  User.create!(user)
 end
