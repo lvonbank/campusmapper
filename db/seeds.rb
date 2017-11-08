@@ -29,6 +29,9 @@ locations = [{:title => 'Nelson Hall', :acronym => 'NH', :department => 'Art', :
     	     {:title => 'WH room 283', :acronym => 'WH', :department => 'Computer Science', :x => 870, :y => 54, :width => 10, :height => 10, :parent_location => @wissink_hall, :owner => @jonathan_hardwick},
   	 ]
 
+plans = [{:name => "Wissink Hall", :imageSource => "wh-1.pdf", :mapped => false, :floorNum => 1},
+{:name => "Armstrong Hall", :imageSource => "ah-1.pdf", :mapped => false, :floorNum => 1}]
+
 movies.each do |movie|
   Movie.create!(movie)
 end
@@ -39,4 +42,9 @@ end
 
 users.each do |user|
   User.create!(user)
+end
+
+plans.each do |plan|
+    FloorPlan.create!(plan)
+    
 end
