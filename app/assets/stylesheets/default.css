@@ -5,7 +5,6 @@ html, body {
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
-  background-image: url("map.png");
 }
 
 div#main {
@@ -97,4 +96,20 @@ div#title {
 
 #zoom-in {
   margin-bottom: 60px;
+}
+
+/* ----- Login (with Google etc.) ----- */
+#login {
+  position: absolute;
+  right: 5px;
+}
+
+#main {
+  background-color: white;
+}
+
+#map {
+    background-image: url("map.png");
+    width: 1500px; /* TODO: Make relative (percentage etc.) */
+    height: 900px;
 }

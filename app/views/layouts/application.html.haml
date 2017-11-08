@@ -21,9 +21,9 @@
       /* TODO future: Wrap in form tag. */
       = search_field("name", "name", { id: "search", placeholder: "Search", autofocus: "" })
       
-      = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
-      
-      = link_to "Sign out", sign_out_and_redirect current_user // Error: method not found
+      %div#login
+        = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
+        = link_to "Sign out", "/users/sign_out"
     
     #main
       - if flash[:notice]
