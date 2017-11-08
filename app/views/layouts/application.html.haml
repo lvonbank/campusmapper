@@ -8,6 +8,8 @@
 
   %body
     %h1.title Campus Mapper
+    %p{:class => "notice" }
+    %p{:class => "alert"}
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]
