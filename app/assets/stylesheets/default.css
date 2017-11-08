@@ -5,17 +5,21 @@ html, body {
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
+  background-image: url("map.png");
 }
+
 div#main {
   margin: 0;
   padding: 0 20px 20px;
 }
+
 a {
   background: transparent;
   color: maroon;
   text-decoration: underline;
   font-weight: bold;
 }
+
 h1 {
   color: maroon;
   font-size: 150%;
@@ -24,38 +28,73 @@ h1 {
   width: 100%;
   border-bottom: 1px solid DarkSlateGrey;
 }
-h1.title {
-  margin: 0 0 1em;
-  padding: 10px;
-  background-color: orange;
-  color: white;
-  border-bottom: 4px solid gold;
-  font-size: 2em;
-  font-style: normal;
-}
-table#movies {
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: 2px solid black;
-}
-table#movies th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: wheat;
-}
-table#movies th, table#movies td {
-  padding: 4px;
-  text-align: left;
-}
+
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
   padding: 4px;
 }
+
 form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
   color: maroon;
+}
+
+/* ---------- View map of campus ---------- */
+#menubar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: lightblue;
+  margin: 0 0 1em;
+  z-index: 99;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+div#title {
+  position: relative;
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 2em;
+  font-style: normal;
+}
+
+#menubar a, #menubar .separator, #menubar #search {
+  float: left;
+  padding: 5px;
+}
+
+#menubar a {
+  margin-top: 13px;
+}
+
+#menubar .separator {
+  margin-top: 5px;
+  font-size: 18pt;
+}
+
+#menubar #search {
+  margin-top: 12px;
+  margin-left: 80px;
+  width: 240px;
+}
+
+#zoom-in, #zoom-out {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+#zoom-in {
+  margin-bottom: 60px;
 }
