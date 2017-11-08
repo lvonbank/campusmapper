@@ -7,9 +7,20 @@
     = csrf_meta_tags
 
   %body
-    %h1.title Campus Mapper
+
     %p{:class => "notice" }
     %p{:class => "alert"}
+    %div#menubar
+      %div#title Campus Mapper
+      = link_to "Home", "/"
+      %div.separator="|"
+      = link_to "Index of locations", "#"
+      %div.separator="|"
+      = link_to "Find directions", "#"
+      
+      /* TODO future: Wrap in form tag. */
+      = search_field(:user, :name, { id: "search", placeholder: "Search", autofocus: "" })
+    
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]
