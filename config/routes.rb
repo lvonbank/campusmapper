@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :professors
+  devise_for :admins
+  devise_for :users
   get 'floorplans/imageslist'
 
   # The priority is based upon order of creation: first created -> highest priority.
